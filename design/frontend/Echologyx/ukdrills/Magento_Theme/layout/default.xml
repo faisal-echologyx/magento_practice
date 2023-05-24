@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="https://fonts.googleapis.com/css?family=Poppins" src_type="url" />
+    </head>
+    <body>
+        <attribute name="class" value="elx_style"/>
+
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true" />
+        <referenceBlock name="wish-list-link" remove="true" />
+        <referenceBlock name="skip_to_content" remove="true" />
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_alt" xsi:type="string">Echologyx UkDrills</argument>
+                <argument name="logo_img_width" xsi:type="string">198</argument>
+                <argument name="logo_img_height" xsi:type="string">66</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="header.panel">
+            <container htmlTag="div" htmlClass="header_contact_and_free_delivery" name="header_contact_and_free_delivery">
+                <block class="Magento\Framework\View\Element\Template" name="contact_number" template="Magento_Theme::contact_number.phtml"></block>
+                <block class="Magento\Framework\View\Element\Template" name="free_delivery" template="Magento_Theme::free_delivery.phtml"></block>
+                <container htmlTag="div" htmlClass="top_links_container" name="top_links_container">
+                    <block class="Magento\Framework\View\Element\Template" name="my_act_btn" template="Magento_Theme::my_act_btn.phtml"></block>
+                </container>
+            </container>
+        </referenceBlock>
+
+
+        <move element="top.links" destination="top_links_container" after="-" />
+
+
+        <referenceBlock name="header-wrapper">
+            <container htmlTag="div" htmlClass="header_div" name="header_div">
+            </container>
+        </referenceBlock>
+
+        <move element="logo" destination="header_div" after="-" />
+        <move element="top.search" destination="header_div" after="logo" />
+        <move element="minicart" destination="header_div" after="top.search" />
+
+
+
+    </body>
+</page>

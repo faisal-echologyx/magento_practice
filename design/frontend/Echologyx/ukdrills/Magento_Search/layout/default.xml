@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="https://fonts.googleapis.com/css?family=Poppins" src_type="url" />
+    </head>
+    <body>
+        <referenceBlock name="advanced-search-link" remove="true" />
+        <referenceBlock name="top.search" template="Magento_Search::form.mini.phtml" />
+    </body>
+</page>
